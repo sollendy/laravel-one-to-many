@@ -38,7 +38,7 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(function() {
 
     // rotte resource dei project
-    Route::resource('projects', ProjectController::class)->parameters(['projects' => 'project:slug']);
+    Route::resource('projects', ProjectController::class)->parameters(['projects' => 'project']);
 
     Route::get('/', [DashboardController::class, 'home'])->name('dashboard.home');
 });
