@@ -44,7 +44,7 @@ class ProjectController extends Controller
         $newProject->slug = Str::slug($formData["title"], "-");
         $newProject->fill($formData);
         $newProject->save();
-        return redirect()->route('admin/projects/show', $newProject->id);
+        return redirect()->route('admin.projects.show', $newProject->id);
     }
 
     /**
