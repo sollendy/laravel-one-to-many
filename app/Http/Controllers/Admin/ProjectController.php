@@ -120,7 +120,7 @@ class ProjectController extends Controller
        // passiamo i parametri del form al metodo statico  make() di Validation
        $validator = Validator::make($formData, [
            // qui ci dobbiamo inserire un array di regole (quelle che abbiamo usato sino a prima)
-           'title' => 'required|max:10|min:2',
+           'title' => 'required|max:12|min:4',
            'content' => 'required|max:1500',
        ], [
             'title.required' => 'Guarda compare, un titolo me lo devi dare.',
